@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Anacovi - Asistente Virtual</title>
+    
+    <!-- Scripts de Botpress Webchat (v3) -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js" defer></script>
+    <script src="https://files.bpcontent.cloud/2025/06/03/18/20250603182229-T18GY59R.js" defer></script>
+    
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        #bp-web-widget-container {
+            bottom: 24px !important;
+            right: 24px !important;
+        }
+        
+        /* Personalización del botón de apertura */
+        .bp-widget-btn {
+            background-color: #0056b3 !important;
+            border-radius: 50% !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Servicios Anacovi</h1>
+        <p>Bienvenido a nuestra plataforma de atención al cliente</p>
+    </header>
+    
+    <main style="padding: 20px; max-width: 1200px; margin: 0 auto;">
+        <h2>Nuestros Servicios</h2>
+        <p>Para consultas inmediatas, utilice nuestro asistente virtual en la esquina inferior derecha.</p>
+        <!-- Tu contenido aquí -->
+    </main>
+
+    <!-- Configuración avanzada del Webchat -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.botpressWebChat.init({
+                botId: "TU_BOT_ID", // Reemplaza con tu ID de bot
+                hostUrl: "https://cdn.botpress.cloud/webchat/v3.0",
+                messagingUrl: "https://messaging.botpress.cloud",
+                botName: "Asistente Anacovi",
+                avatarUrl: "https://ejemplo.com/logo-anacovi.png", // URL de tu logo
+                phoneNumber: "+573001234567", // Opcional: número de soporte
+                emailAddress: "contacto@anacovi.com", // Opcional: email de soporte
+                website: "https://anacovi.com",
+                showConversationsButton: false,
+                enablePersistHistory: true,
+                showCloseButton: true,
+                disableAnimations: false,
+                closeOnEscape: true,
+                showPoweredBy: false,
+                locale: "es",
+                theme: {
+                    primaryColor: "#0056b3", // Color corporativo
+                    secondaryColor: "#f8f9fa",
+                    backgroundColor: "#ffffff",
+                    textColor: "#333333",
+                    fontFamily: "'Arial', sans-serif"
+                },
+                hideWidget: false,
+                containerWidth: "400px",
+                layoutWidth: "400px",
+                useSessionStorage: true,
+                showBotInfoPage: true,
+                botConvoDescription: "Asistente virtual para consultas sobre servicios Anacovi",
+                onReady: function() {
+                    console.log("Chatbot Anacovi cargado correctamente");
+                    // Aquí puedes añadir lógica post-carga
+                }
+            });
+        });
+    </script>
+</body>
+</html>
